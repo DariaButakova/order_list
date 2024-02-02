@@ -25,6 +25,11 @@ class SiteController extends Controller
     protected $arr_months = ['01' => 'Январь', '02' => 'Февраль', '03' => 'Март', '04' => 'Март', '05' => 'Апрель', '06' => 'Июнь',
         '07' => 'Июль', '08' => 'Август', '09' => 'Сентябрь', '10' => 'Октябрь', '11' => 'Ноябрь', '12' => 'Декабрь'];
 
+    /**
+     * Get data for left menu.
+     *
+     * @return array
+     */
     private function getDataLeftMenu()
     {
         $result=[];
@@ -48,6 +53,11 @@ class SiteController extends Controller
         return $result;
     }
 
+    /**
+     * Get data for filter.
+     *
+     * @return array
+     */
     private function getDataFilter()
     {
         $result = [
@@ -68,9 +78,9 @@ class SiteController extends Controller
     }
 
     /**
-     * Displays homepage.
+     * Displays index page.
      *
-     * @return string
+     * @return array
      */
     public function actionIndex()
     {
@@ -115,6 +125,4 @@ class SiteController extends Controller
             'arr_months'=>$this->arr_months
         ]);
     }
-
-
 }
